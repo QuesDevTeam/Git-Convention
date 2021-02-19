@@ -22,6 +22,8 @@
 - Significant update의 경우 중계 브렌치를 거쳐 `develop`에 머지됩니다. 이 경우 중계 브랜치 및 `feature` 브랜치의 이름은 다음과 같이 정합니다.
   - 중계 브렌치: feature/feature-name/base
   - 기능 브렌치: feature/feature-name/specific-feature
+  ![예시](./images/git_branching_guidance_1.png)
+  - 이 경우에도, 기능 브랜치는 `pull request` 기능을 이용해 `review`를 받은 후 중계 브랜치에 `merge`합니다.
 - `feature` 브랜치의 이름은 다음과 같이 명명합니다.
   - 해당하는 issue를 작성하였을 경우
     - feature/issue#37
@@ -34,7 +36,7 @@
 - 그리고 실제로 출시를 할 경우, `tag`를 이용해 출시버전명을 명시합니다.
 
 ### `hotfix` branch
-- 이 브랜치를 사용할 일이 없기를 바랍니다.(~~촉수엄금~~)
+- 이 브랜치를 사용할 일이 없기를 바랍니다.(~~사용금지~~)
 - `hotfix` 브랜치는 `master`로 부터 생성됩니다.
 - 현재 이미 출시된 버전에 **치명적인** 결함이 있을 경우 생성하여 수정 작업 후 `master`, `develop`에 각각 `merge`합니다.
 - 항상 issue를 작성 후 작업진행을 합니다.
