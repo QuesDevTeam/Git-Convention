@@ -1,5 +1,5 @@
 # Git branching guidance
-## We should keep this rules.
+## We should keep these rules.
 - 모든 새 기능과, 버그 수정은 `feature` 브랜치를 이용합니다.
 - 모든 `merge`는 `pull request` 기능을 통하여 `review` 받습니다.
   - 최소 3명의 `approve`를 얻은 후 최종적으로 `merge`합니다.
