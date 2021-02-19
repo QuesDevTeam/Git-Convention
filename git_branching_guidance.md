@@ -19,16 +19,16 @@
 ### `feature` branch
 - `feature` 브랜치는 모든 기능 개발과, 버그 수정을 담당합니다.
 - `feature` 브랜치는 항상 `develop`에서 생성되며, 작업이 완료되면 `develop`에 `merge`됩니다.
-- Significant update의 경우 중계 브렌치를 거쳐 `develop`에 머지됩니다. 이 경우 중계 브랜치 및 `feature` 브랜치의 이름은 다음과 같이 정합니다.
-  - 중계 브렌치: feature/feature-name/base
-  - 기능 브렌치: feature/feature-name/specific-feature
-  ![예시](./images/git_branching_guidance_1.png)
-  - 이 경우에도, 기능 브랜치는 `pull request` 기능을 이용해 `review`를 받은 후 중계 브랜치에 `merge`합니다.
 - `feature` 브랜치의 이름은 다음과 같이 명명합니다.
   - 해당하는 issue를 작성하였을 경우
     - feature/issue#37
   - 해당하는 issue가 없을 경우
     - feature/setup-project
+- Significant update의 경우 중계 브렌치를 거쳐 `develop`에 머지됩니다. 이 경우 중계 브랜치 및 `feature` 브랜치의 이름은 다음과 같이 정합니다.
+  - 중계 브렌치: feature/feature-name/base
+  - 기능 브렌치: feature/feature-name/specific-feature
+  ![예시](./images/git_branching_guidance_1.png)
+  - 이 경우에도, 기능 브랜치는 `pull request` 기능을 이용해 `review`를 받은 후 중계 브랜치에 `merge`합니다.
 
 ### `master` branch
 - 이 브랜치는 항상 출시가 가능한 상태로 유지됩니다.
