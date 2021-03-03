@@ -1,6 +1,6 @@
 # Git branching guidance
 ## We should keep these rules.
-- 모든 새 기능과은 `feature` 브랜치를 이용합니다.
+- 모든 새 기능은 `feature` 브랜치를 이용합니다.
 - 기능 수정과 버그 수정은 `fix` 브랜치를 이용합니다.
 - `develop` 브랜치에 행해지는 모든 `merge`는 `pull request` 기능을 통하여 `review` 받습니다.
   - 해당 프로젝트의 모든 팀원의 `approve`를 얻은 후 최종적으로 `merge`합니다.
