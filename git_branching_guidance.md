@@ -1,6 +1,7 @@
 # Git branching guidance
 ## We should keep these rules.
-- 모든 새 기능과, 버그 수정은 `feature` 브랜치를 이용합니다.
+- 모든 새 기능은 `feature` 브랜치를 이용합니다.
+- 기능 수정과 버그 수정은 `fix` 브랜치를 이용합니다.
 - `develop` 브랜치에 행해지는 모든 `merge`는 `pull request` 기능을 통하여 `review` 받습니다.
   - 해당 프로젝트의 모든 팀원의 `approve`를 얻은 후 최종적으로 `merge`합니다.
   - 아래의 경우는 팀 협의 후 프로젝트/PR마다 결정합니다:
@@ -10,14 +11,14 @@
 
 ## Branches
 - 우리가 사용하는 브랜치들은 다음과 같습니다.
-  - `master`, `develop`, `feature`, `hotfix`
+  - `master`, `develop`, `feature`, `fix`, `hotfix`
 
 ### `develop` branch
 - `develop` 브랜치는 개발에 있어 메인 파트를 담당합니다.
 - 최초의 `develop` 브랜치는 `master`에서 갈라져 나옵니다.
 
 ### `feature` branch
-- `feature` 브랜치는 모든 기능 개발과, 버그 수정을 담당합니다.
+- `feature` 브랜치는 모든 기능 개발을 담당합니다.
 - `feature` 브랜치는 항상 `develop`에서 생성되며, 작업이 완료되면 `develop`에 `merge`됩니다.
 - `feature` 브랜치의 이름은 다음과 같이 명명합니다.
   - 해당하는 issue를 작성하였을 경우
@@ -29,6 +30,10 @@
   - 기능 브렌치: feature/feature-name/specific-feature
   ![예시](./images/git_branching_guidance_1.png)
   - 이 경우에도, 기능 브랜치는 `pull request` 기능을 이용해 `review`를 받은 후 중계 브랜치에 `merge`합니다.
+
+### `fix` branch
+- `fix` 브랜치는 기능 수정, 버그 수정 등 이미 개발된 부분의 수정을 담당합니다
+- `fix` 브랜치의 세부 규칙은 `feature` 브랜치와 같습니다.
 
 ### `master` branch
 - 이 브랜치는 항상 출시가 가능한 상태로 유지됩니다.
