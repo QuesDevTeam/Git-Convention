@@ -66,7 +66,7 @@
   - `feature` 브랜치의 예:
     - 중계 브렌치: feature/feature-name/base
     - 기능 브렌치: feature/feature-name/specific-feature
-    ![예시](./images/branch_1.png)
+    ![예시](../images/branch_1.png)
     - 이 경우에도, 기능 브랜치는 `pull request` 기능을 이용해 `review`를 받은 후 중계 브랜치에 `merge`합니다.
 
 #### `feature` branch
