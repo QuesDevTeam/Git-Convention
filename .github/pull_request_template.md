@@ -8,3 +8,7 @@ Fixes/resolves #ISSUE_ID and fixes/resolves #OTHER_ISSUE_ID
 - Make this section as small as possible.
 - Things you want to say.
 - Various references.
+
+
+## Screenshots
+- Sometimes, just one screenshot describes better than hundreds of sentences.
