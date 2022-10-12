@@ -1,10 +1,13 @@
-Fixes/resolves #ISSUE_ID and fixes/resolves #OTHER_ISSUE_ID
+해결된 이슈: #ISSUE_ID
 
-## Proposed Changes
-- Fix something
-- Or Implement something
+## 작업 배경
+- 작업 배경을 기록하세요.
 
-## Notes
-- Make this section as small as possible.
-- Things you want to say.
-- Various references.
+## 작업 내용
+- 변경 사항을 기록하세요.
+
+## 기타
+- 팀원들에게 알릴 기타 내용을 기록하세요.
+
+## 스크린샷
+- 스크린샷 하나가 100 마디 설명보다 나을 때가 있습니다.
