@@ -1,4 +1,4 @@
-해결된 이슈: #ISSUE_ID
+Resolves #ISSUE_ID
 
 ## 작업 배경
 - 작업 배경을 기록하세요.
