@@ -11,7 +11,7 @@
 
 ## Branches
 - 우리가 사용하는 브랜치들은 다음과 같습니다.
-  - `master`, `develop`, `feature`, `fix`, `hotfix`
+  - `master`, `develop`, `feature`, `fix`, `docs`, `hotfix`
 
 ### `develop` branch
 - `develop` 브랜치는 개발에 있어 메인 파트를 담당합니다.
@@ -48,6 +48,7 @@
     feature/<b>add</b>-description
     fix/<b>user</b>-api
     fix/build-script
+    docs/2.3.0-release-note
     </pre>
   - 너무 모호하게/자세하게 적지 않습니다.
     <pre>
@@ -72,6 +73,9 @@
 
 #### `fix` branch
 - `fix` 브랜치는 기능 수정, 버그 수정 등 이미 개발된 부분의 수정을 담당합니다.
+
+### `docs` branch
+- `docs` 브랜치는 문서 관련(release note, readme, 그 외) 수정을 담당합니다.
 
 ### `master` branch
 - 이 브랜치는 항상 출시가 가능한 상태로 유지됩니다.
