@@ -1,7 +1,6 @@
 # Git branching guidance
 ## We should keep these rules.
 - 모든 새 기능은 `feature` 브랜치를 이용합니다.
-- 기존 기능의 개선은 `enhancement` 브랜치를 이용합니다.
 - 기능 수정과 버그 수정은 `fix` 브랜치를 이용합니다.
 - `develop` 브랜치에 행해지는 모든 `merge`는 `pull request` 기능을 통하여 `review` 받습니다.
   - 해당 프로젝트의 모든 팀원의 `approve`를 얻은 후 최종적으로 `merge`합니다.
@@ -12,7 +11,7 @@
 
 ## Branches
 - 우리가 사용하는 브랜치들은 다음과 같습니다.
-  - `master`, `develop`, `feature`, `enhancement`, `fix`, `hotfix`
+  - `master`, `develop`, `feature`, `fix`, `docs`, `hotfix`
 
 ### `develop` branch
 - `develop` 브랜치는 개발에 있어 메인 파트를 담당합니다.
@@ -21,7 +20,6 @@
 ### Sub branches
 - *sub* 브랜치들은 다음과 같습니다
   - `feature`
-  - `enhancement`
   - `fix`
 - *sub* 브랜치들은 항상 `develop`에서 생성되며, 작업이 완료되면 `develop`에 `merge`됩니다.
 - 기본 네이밍 규칙
@@ -46,10 +44,11 @@
     </pre>
     <pre>
     // Good
-    enhancement/readme
-    enhancement/<b>upgrade</b>-node-ubuntu
-    enhancement/<b>hide</b>-docker-directory
+    feature/<b>upgrade</b>-node-ubuntu
+    feature/<b>add</b>-description
+    fix/<b>user</b>-api
     fix/build-script
+    docs/2.3.0-release-note
     </pre>
   - 너무 모호하게/자세하게 적지 않습니다.
     <pre>
@@ -72,11 +71,11 @@
 #### `feature` branch
 - `feature` 브랜치는 모든 기능 개발을 담당합니다.
 
-#### `enhancement` branch
-- `enhancement` 브랜치는 이미 개발된 부분의 기능 개선, README/템플릿 등의 비기능적인 개선 등을 담당합니다.
-
 #### `fix` branch
 - `fix` 브랜치는 기능 수정, 버그 수정 등 이미 개발된 부분의 수정을 담당합니다.
+
+### `docs` branch
+- `docs` 브랜치는 문서 관련(release note, readme, 그 외) 수정을 담당합니다.
 
 ### `master` branch
 - 이 브랜치는 항상 출시가 가능한 상태로 유지됩니다.
