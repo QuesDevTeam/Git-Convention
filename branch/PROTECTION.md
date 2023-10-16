@@ -17,7 +17,7 @@
 - Require conversation resolution before merging
   - 기본적으로 conversation은 `conversation을 시작한 사람이 resolve`합니다
   - `상식선에서` 모든 conversation 참가자가 이견이 없는 상황에서 누가 resolve해야할지 모호한 상황이라면 `발견한 사람이 resolve`합니다
-  - PR 범위 내에서 resolve할 수 없는 conversation은 `issuel 혹은 discussion으로 이동`합니다
+  - PR 범위 내에서 resolve할 수 없는 conversation은 `issue 혹은 discussion으로 이동`합니다
 
 ## 규칙의 batch update
 - 휴가 등의 사정으로 인해 `required number of approvals`에 변경이 필요하다면 QuesDevTeam organization의 owner와 공유합니다
