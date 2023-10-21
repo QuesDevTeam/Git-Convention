@@ -8,7 +8,11 @@
 
 # Setup
 ```console
-npm install --save-dev @commitlint/cli @commitlint/config-conventional
+$ cd new_project
+
+new_project $ npm install --save-dev @commitlint/cli @commitlint/config-conventional
+# Setup commitlint hooks
+new_project $ sh <(curl -s https://raw.githubusercontent.com/QuesDevTeam/Git-Convention/master/commit/init.sh)
 ```
 
 # Rules
