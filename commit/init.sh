@@ -1,5 +1,5 @@
 #!/bin/sh
-# This essentially does the same thing as what [Husky](https://typicode.github.io/husky) does
+# This essentially does the same thing as what Husky(https://typicode.github.io/husky) does
 
 COMMIT_LINT_HOOK_PATH="$PWD/.custom_git_hooks"
 COMMIT_LINT_CMT_MSG_HOOK_PATH="$COMMIT_LINT_HOOK_PATH/commit-msg"
