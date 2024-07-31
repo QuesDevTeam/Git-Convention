@@ -1,0 +1,41 @@
+#!/bin/sh
+
+BASE_DIR_PATH=$(cd -- $(dirname $0)/../ && pwd -P)
+
+has_binary() {
+  BINARY_NAME="$1"
+  which npm > /dev/null 2>&1
+}
+
+try_sourcing_nvm() {
+  if [ -z "$NVM_DIR" ]; then
+    if [ -n "$XDG_CONFIG_HOME" ]; then
+      NVM_DIR="$XDG_CONFIG_HOME/nvm"
+    else
+      NVM_DIR="$HOME/.nvm"
+    fi
+  fi
+
+  if [ ! -d $NVM_DIR ]; then
+    printf "Environment variable \$NVM_DIR not set.\n"
+    return 1
+  fi
+
+  if [ -s "$NVM_DIR/nvm.sh" ]; then
+    . "$NVM_DIR/nvm.sh"
+  fi
+}
+
+if ! has_binary npm; then
+  try_sourcing_nvm
+fi
+
+if ! has_binary npm; then
+  printf "Can't find npm. Quitting...\n"
+  exit 1
+fi
+
+COMMIT_EDITMSG_PATH="$(pwd)/$1"
+echo $COMMIT_EDITMSG_PATH
+
+(cd "$BASE_DIR_PATH" && npx --no -- commitlint --edit "$COMMIT_EDITMSG_PATH")
