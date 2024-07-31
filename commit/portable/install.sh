@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# For some environments, `git config --get-all` shows result in `less`, which isn't a desired behavior
+VISUAL=cat
+PAGER=cat
+
 . ./functions
 
 if ! has_binary npm; then
