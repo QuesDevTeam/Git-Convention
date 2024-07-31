@@ -1,5 +1,16 @@
 #!/bin/sh
 
+. ./functions
+
+if ! has_binary npm; then
+  try_sourcing_nvm
+fi
+
+if ! has_binary npm; then
+  printf "Can't find npm. Quitting...\n"
+  exit 1
+fi
+
 BASE_DIR_PATH=$(cd -- $(dirname $0) && pwd -P)
 HOOKS_PATH="$BASE_DIR_PATH/hooks"
 
@@ -20,6 +31,9 @@ if [ $? -eq 0 ]; then
   read CONFIRMATION
   printf "\n"
 else
+  printf "  새로운 global git hook을 추가합니다.(Return / Ctrl-c)"
+  read
+
   CONFIRMATION="add"
 fi
 
@@ -44,5 +58,6 @@ printf "  업데이트된 global git hooks:\n"
 git config --global --get-all core.hooksPath
 printf "\n"
 
-printf "2. \"npm i\"를 실행합니다.\n"
+printf "2. \"npm i\"를 실행합니다.(Return / Ctrl-c)"
+read
 npm i

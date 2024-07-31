@@ -1,0 +1,23 @@
+has_binary() {
+  BINARY_NAME="$1"
+  which npm > /dev/null 2>&1
+}
+
+try_sourcing_nvm() {
+  if [ -z "$NVM_DIR" ]; then
+    if [ -n "$XDG_CONFIG_HOME" ]; then
+      NVM_DIR="$XDG_CONFIG_HOME/nvm"
+    else
+      NVM_DIR="$HOME/.nvm"
+    fi
+  fi
+
+  if [ ! -d $NVM_DIR ]; then
+    printf "Environment variable \$NVM_DIR not set.\n"
+    return 1
+  fi
+
+  if [ -s "$NVM_DIR/nvm.sh" ]; then
+    . "$NVM_DIR/nvm.sh"
+  fi
+}
