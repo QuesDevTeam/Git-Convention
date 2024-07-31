@@ -7,13 +7,23 @@
 - footer: 마지막 라인. **현재 미사용**
 
 # Setup
+## Per-Project
 ```console
 $ cd new_project
 
 new_project $ npm install --save-dev @commitlint/cli @commitlint/config-conventional
 # Setup commitlint hooks
-new_project $ curl -LO https://raw.githubusercontent.com/QuesDevTeam/Git-Convention/master/commit/commitlint.config.js
+new_project $ curl -LO https://raw.githubusercontent.com/QuesDevTeam/Git-Convention/master/commit/portable/commitlint.config.js
 new_project $ sh <(curl -s https://raw.githubusercontent.com/QuesDevTeam/Git-Convention/master/commit/init.sh)
+```
+
+## Global Git Hook
+```console
+$ git clone git@github.com:QuesDevTeam/Git-Convention.git
+$ cd Git-Convention
+
+Git-Convention $ cd commit/portable
+Git-Convention/commit/portable $ ./install.sh
 ```
 
 # Rules
